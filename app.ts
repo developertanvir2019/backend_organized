@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extends: true }))
 
 
 app.get('/', (req: Request, res: Response) => {
-    // res.send('hello world')
+    res.send('hello world')
 
 })
 
