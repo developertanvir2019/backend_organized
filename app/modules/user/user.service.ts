@@ -17,5 +17,7 @@ export const createUserToDB = async () => {
         emergencyContactNo: 'string',
         presentAddress: 'string',
         permanentAddress: 'string',
-    })
+    });
+    await user.save();
+    return user
 }
