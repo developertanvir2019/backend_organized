@@ -1,3 +1,5 @@
+import { Model } from "mongoose";
+
 export interface IUser {
     id: string;
     role: "student";
@@ -17,6 +19,10 @@ export interface IUser {
 }
 
 
+
+interface UserModel extends Model<IUser> {
+    getAdminUser(): IUser[];
+}
 export interface IUserMethods {
-    fullname(): string
+    fullName(): string
 }

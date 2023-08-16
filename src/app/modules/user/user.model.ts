@@ -60,6 +60,11 @@ const userSchema = new Schema<IUser, UserModel, IUserMethods>({
 })
 
 
+userSchema.static("getAdminUser", async function getAdminUser() {
+    const admins = await this.find({ role: 'admin' })
+})
+
+
 userSchema.method('fullName', function fulName() {
     return this.name.firstName + " " + this.name.lastName;
 })
