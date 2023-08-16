@@ -11,3 +11,8 @@ export const getUsersFromDB = async () => {
     const users = await User.find();
     return users;
 }
+
+
+export const getUserByIdFromDB = (payload: string) => {
+
+}
