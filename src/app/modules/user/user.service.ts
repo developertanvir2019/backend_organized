@@ -13,6 +13,7 @@ export const getUsersFromDB = async () => {
 }
 
 
-export const getUserByIdFromDB = (payload: string) => {
-
+export const getUserByIdFromDB = async (payload: string): Promise<IUser | null> => {
+    const user = await User.findOne({ id: payload })
+    return user
 }
